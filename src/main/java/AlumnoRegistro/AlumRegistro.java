@@ -1,12 +1,12 @@
 package AlumnoRegistro;
 
-import jakarta.servlet.ServletConfig;
+import javax.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -61,8 +61,8 @@ public class AlumRegistro extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response)
-            throws jakarta.servlet.ServletException, IOException {
+    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)
+            throws javax.servlet.ServletException, IOException {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
@@ -79,8 +79,8 @@ public class AlumRegistro extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response)
-            throws jakarta.servlet.ServletException, IOException {
+    protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response)
+            throws javax.servlet.ServletException, IOException {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {

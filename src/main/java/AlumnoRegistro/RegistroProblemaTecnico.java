@@ -1,15 +1,15 @@
 package AlumnoRegistro;
 
-import jakarta.servlet.ServletConfig;
+import javax.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.PreparedStatement;
 
 /**
@@ -20,7 +20,7 @@ public class RegistroProblemaTecnico extends HttpServlet {
 
     private Connection con;
 
-    public void init(ServletConfig scg) throws jakarta.servlet.ServletException {
+    public void init(ServletConfig scg) throws javax.servlet.ServletException {
         // se deben de establecer los elementos para la conexion con bd
         String url = "jdbc:mysql://localhost:3306/maquinas";
         //controlador:motorBD:puerto/IP/nombreBD
