@@ -52,7 +52,7 @@
          <div id="indicaciones5">
             <h1>Estos son los datos de la maquina registrada</h1>
         </div>
-        <table border="1">
+        <table id="tablamaquina">
             <tr>
                 <th>ID</th>
                 <th>Marca</th>

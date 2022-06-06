@@ -48,12 +48,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/Estilos.css">
+        <style>
+            h1{
+                color:#FFF;
+            }
+            #indicaciones5{
+                background-color: #111b28;
+                position:absolute;
+                left: 15%;
+                width: 75%;
+            }
+        </style>
     </head>
     <body>
          <div id="indicaciones5">
             <h1>Estos son los problemas tecnicos de las maquinas</h1>
         </div>
-        <table border="1">
+        <table id="tablabita">
             <tr>
                 <th>ID Maquina</th>
                 <th>Marca</th>

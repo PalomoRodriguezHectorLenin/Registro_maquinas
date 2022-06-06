@@ -20,9 +20,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/Estilos.css">
+        <style>
+            h1{
+                color:#FFF;
+                position: absolute;
+                left: 400px;
+                top: -7px;
+            }
+        </style>
     </head>
     <body>
-        <table border="1">
+        <div id="Dalumno">
+            <h1>Datos del alumno</h1>
+        </div>
+        <table id="tablaperfil">
             <tr>
                 <th>Boleta: <%=usuario%></th>
             </tr>

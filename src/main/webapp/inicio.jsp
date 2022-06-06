@@ -24,9 +24,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/Estilos.css">
+        <style>
+            h2{
+                color: #FFF;
+            }
+        </style>
     </head>
     <body>
-        <h5>Usuario:<%=usuario%> Nombre:<%=nombre%> Primer apellido:<%=primerApellido%> Segundo apellido:<%=segundoApellido%> Semestre:<%=semestre%> Turno:<%=turno%> </h5>
+        <h4>Usuario: <%=usuario%> Nombre: <%=nombre%> Primer apellido: <%=primerApellido%> Segundo apellido: <%=segundoApellido%> 
+            Semestre: <%=semestre%> Turno: <%=turno%> </h4>
         <div id="titulo">
         <h2>Menú</h2>
         </div>

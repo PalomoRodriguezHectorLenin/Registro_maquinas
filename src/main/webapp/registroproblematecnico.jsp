@@ -54,11 +54,12 @@
     <body>
         <fieldset>
             <legend>Describir Problema Tecnico</legend>
-            <form name="frm_registro_problema" action="RegistroProblemaTecnico" method="post" onsubmit="return validarDatosRP()">
+            <form name="frm_registro_problema" id="" action="RegistroProblemaTecnico" method="post" onsubmit="return validarDatosRP()">
                 <div id="indicaciones4">
                     <h1>A continuación debera de seleccionar el id de la maquina y describir el problema</h1>
                 </div>
                 <br>
+                <div id="colorformulario">
                 <div id="elegirmaquina">
                     <label>
                         Seleccione la maquina
@@ -108,6 +109,7 @@
                     <input type="submit" value="Enviar Problema tecnico" id="Boton17">
                 </div>
                 <br>
+                </div>
             </form>
         </fieldset>
         <br>
