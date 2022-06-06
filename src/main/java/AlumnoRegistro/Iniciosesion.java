@@ -1,18 +1,19 @@
 package AlumnoRegistro;
 
-import javax.servlet.ServletConfig;
+import jakarta.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +24,8 @@ import java.util.logging.Logger;
 public class Iniciosesion extends HttpServlet {
     
     private Connection con;
+    private Statement set;
+    private ResultSet rs;
     public void init(ServletConfig scg) throws ServletException {
         // se deben de establecer los elementos para la conexion con bd
         String url = "jdbc:mysql://localhost:3306/maquinas";
@@ -35,6 +38,7 @@ public class Iniciosesion extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
 
             con = DriverManager.getConnection(url, username, password);
+            set = con.createStatement();
 
         } catch (Exception e) {
             System.out.println("No conecto");
