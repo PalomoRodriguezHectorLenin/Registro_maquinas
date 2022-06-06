@@ -111,13 +111,11 @@ public class MaRegistro extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String boleta = request.getParameter("Boleta");
+        
         String nombre = request.getParameter("Nombre");
         String primerApellido = request.getParameter("Primerapellido");
         String segundoApellido = request.getParameter("Segundoapellido");
         String correo = request.getParameter("Correo");
-        String semestre = request.getParameter("Semestre");
-        String turno = request.getParameter("Turno");
         String password = request.getParameter("Password");
         int resultado = 0;
         PrintWriter out = response.getWriter();
@@ -126,11 +124,11 @@ public class MaRegistro extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AlumRegistro</title>");
+            out.println("<title>Servlet MaRegistro</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<button onclick=\"window.location='./index.html'\">Inicio</button>");
-            resultado = altaCuenta(boleta, nombre, primerApellido, segundoApellido, correo, semestre, turno, password);
+            resultado = altaCuenta(nombre, primerApellido, segundoApellido, correo, password);
             if (resultado == 1) {
                 out.println("<h1>El registro fue satisfactorio</h1>");
             }    
@@ -138,7 +136,7 @@ public class MaRegistro extends HttpServlet {
           resultado = 0;
           mensajeError = e.getMessage();
           if(e.getErrorCode() == 1062){
-          out.println("<h1>El registro de la cuenta no fue satisfactorio debido a que ya existe un registro con el número de boleta:"+boleta+"</h1>");
+          out.println("<h1>El registro de la cuenta no fue satisfactorio debido a que ya existe un registro con el correo electronico:"+correo+"</h1>");
           }else{
               out.println("<h1>El registro no fue satisfactorio, codigo de error:"+e.getErrorCode()+": "+mensajeError+"</h1>");
           }
@@ -147,7 +145,7 @@ public class MaRegistro extends HttpServlet {
         finally
         {
             
-            out.println("<button onclick=\"window.location='./registroalumno.html'\">Regresar</button>");
+            out.println("<button onclick=\"window.location='./registromaestro.html'\">Regresar</button>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -155,25 +153,21 @@ public class MaRegistro extends HttpServlet {
 
     }
 
-    private int altaCuenta(String boleta,
+    private int altaCuenta(
+            
             String nombre,
             String primerApellido,
             String segundoApellido,
             String correo,
-            String semestre,
-            String turno,
             String password) throws SQLException {
-        String isql = "insert into cuenta_alumno(boleta,nombres,primer_apellido,segundo_apellido,correo,semestre,turno,password)"
-                + " values(?,?,?,?,?,?,?,?)";
+        String isql = "insert into cuenta_maestro(nombres,primer_apellido,segundo_apellido,correo,password)"
+                + " values(?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(isql);
-        ps.setLong(1, Long.parseLong(boleta));
-        ps.setString(2, nombre);
-        ps.setString(3, primerApellido);
-        ps.setString(4, segundoApellido);
-        ps.setString(5, correo);
-        ps.setInt(6, Integer.parseInt(semestre));
-        ps.setString(7, turno);
-        ps.setString(8, password);
+        ps.setString(1, nombre);
+        ps.setString(2, primerApellido);
+        ps.setString(3, segundoApellido);
+        ps.setString(4, correo);
+        ps.setString(5, password);
         int resultado = ps.executeUpdate();
         ps.close();
         return resultado;
