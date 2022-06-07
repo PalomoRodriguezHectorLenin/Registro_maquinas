@@ -11,20 +11,33 @@
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
-       
-        border: 20px solid #111b28;
-        
+        border: 20px solid #111b28;  
         margin: 10px  
         }
+        body{
+            background-image: url(./imagenes/alumnos.jpg);
+            background-repeat: no-repeat;
+            image-resolution: 140px;
+            background-size:100%;
+            max-width: 100%;
+            image-rendering: 100%;
+        }
+        #contenedorindex{
+            background-color: cadetblue ;
+            width: 25%;
+            position:relative;
+            left: 75%;
+            border-radius:50px ;
+        }   
     </style>
     <body>
        
-
-        <fieldset>
-            <legend>Registro de alumno</legend>
-            <form name="frm_registro_cuenta" action="AlumRegistro" method="post" id="formulario" onsubmit="return validarDatos()">
+    <div id="contenedorindex">
         <button onclick="window.location='./index.html'" id="Boton4">Inicio</button>
-        <button onclick="window.location='./iniciarsesion.html'" id="Boton5">Iniciar sesión</button>
+        <button onclick="window.location='./iniciarsesion.html'" id="Boton5">Iniciar sesión</button>  
+    </div>
+            <form name="frm_registro_cuenta" action="AlumRegistro" method="post" id="formulario" onsubmit="return validarDatos()">
+        
         <div id="indicacion1">
             <p id="retitulo">Rellena todos los campos que se piden a continuación</p>
             
@@ -113,6 +126,6 @@
         <br>
         </div>
         </form>
-            </fieldset>
+            
     </body>
 </html>
