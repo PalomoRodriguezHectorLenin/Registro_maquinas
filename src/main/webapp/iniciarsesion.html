@@ -12,10 +12,13 @@
         }
     </style>
     <body>
+        <div id="menu">
         <button onclick="window.location='./index.html'" id="Boton7">Inicio</button>
+        <button onclick="window.location='./registroalumno.html'" id="Boton22">Registrarse como Alumno</button>
+        </div>
         <fieldset>
             <legend>Iniciar sesión</legend>
-        <form name="frm_inicio_sesion" action="Iniciosesion" method="post" onsubmit="return validarDatosIniciarSesion()">
+        <form name="frm_inicio_sesion" id="form_inses"action="Iniciosesion" method="post" onsubmit="return validarDatosIniciarSesion()">
         <div id="instrucciones2">
             <h1>Introduzca su boleta y su contraseña</h1>
         </div>

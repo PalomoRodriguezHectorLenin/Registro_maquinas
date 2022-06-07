@@ -13,19 +13,19 @@ body{
 
 #iniciosesion{
     position: absolute;
-    right: 200px;
+    right: 350px;
     top: 13px;
 }
 
 #maestro{
-    position: fixed;
-    left: 650px;
+    position: absolute;
+    left: 750px;
     top: 200px;
 }
 
 #alumno{
-    position: fixed;
-    left: 650px;
+    position: absolute;
+    left: 750px;
     top: 300px;
 }
 
@@ -37,6 +37,18 @@ body{
     border-radius: 15px;
 }
 
+#form_inses{
+    background-color: wheat;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    height: 400px;
+    
+}
+#field1{
+    position: absolute;
+    top: 50px;
+}
 #Boton2{
     width: 100px;
     height: 40px;
@@ -125,16 +137,25 @@ h1{
 }
 
 #campoini{
-    position:abstolute;
-    background-color:darksalmon;
+    position:relative;   
     height: 25px;
+    top: 50px;
 }
 
 #campoini2{
-    position:abstolute;
-    background-color:darksalmon;
+    position:relative;
     height: 25px;
+    top: 100px;
 }
+
+#menu{
+    background-color: cadetblue;
+    width: 25%;
+    position:relative;
+    left: 75%;
+    border-radius:50px ;
+}
+
 
 #Boton7{
     width: 100px;
@@ -142,6 +163,9 @@ h1{
     background-color:#a5ae9d;
     color: #fff;
     border-radius: 15px;
+    position:relative;
+    left: -30px;
+    top: 5px;
 }
 
 #Boton8{
@@ -150,7 +174,27 @@ h1{
     background-color:#a5ae9d;
     color: #fff;
     border-radius: 15px;
+    
 }
+
+#Boton22{
+    width: 140px;
+    height: 40px;
+    background-color:#a5ae9d;
+    color: #fff;
+    border-radius: 15px;
+    position:relative;
+    right: 10px; 
+    top: -5px;
+}
+
+#iniciarsesionalum{
+    position: absolute;
+    top: 300px;
+    left: 45%;
+}
+
+
 
 #titulo{
     background-color:#111b28;
